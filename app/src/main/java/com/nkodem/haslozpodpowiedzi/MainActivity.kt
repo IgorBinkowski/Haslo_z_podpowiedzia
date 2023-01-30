@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 
@@ -16,13 +17,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.Sprawdź).setOnClickListener {
             var password = findViewById<TextInputEditText>(R.id.Hasło).text.toString()
             var potwierdź = findViewById<TextInputEditText>(R.id.Potwierdź).text.toString()
-            val CheckedTextView = findViewById<TextView>(R.id.Zgodne)
 
-            if (password == "haslo"){
-                android.R.drawable.checkbox_on_background
+            if (password == potwierdź){
+                findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_on_background)
             }
                 else{
-                android.R.drawable.checkbox_off_background}
+                findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_off_background)}
         }
     }
 }
