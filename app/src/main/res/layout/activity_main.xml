@@ -20,9 +20,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/Sprawdź"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Sprawdź"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,7 +32,7 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/Hasło"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="hint"
@@ -56,6 +57,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Potwierdź"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="hint"
@@ -65,4 +67,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.161" />
+
+    <CheckedTextView
+        android:id="@+id/Zgodne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zgodne"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <CheckedTextView
+        android:id="@+id/Cyfra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cyfra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <CheckedTextView
+        android:id="@+id/MalaLitera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckedTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
+
+    <CheckedTextView
+        android:id="@+id/DuzaLitera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckedTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.487" />
+
+    <CheckedTextView
+        android:id="@+id/ZnakSpecjalny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Znaki Specjalne"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
 </androidx.constraintlayout.widget.ConstraintLayout>
