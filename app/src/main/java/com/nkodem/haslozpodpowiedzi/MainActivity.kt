@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
             }
                 else{
                 findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_off_background)}
+            if (password=="^(?=.*[A-Z])$"){
+                findViewById<ImageView>(R.id.imageView2).setImageResource(android.R.drawable.checkbox_on_background)
+            }
         }
     }
 }
