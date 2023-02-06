@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             var duza ="-?+(\\.[A-Z]+)?".toRegex()
             var mala ="-?+(\\.[a-z]+)?".toRegex()
             var cyfra ="-?+(\\.[0-9]+)?".toRegex()
-            var znak ="-?+(\\.[%!_$#&-]+)?".toRegex()
+            var znak ="-?+(\\.[%!_$#&*-]+)?".toRegex()
             if (password == potwierdź){
                 findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_on_background)
             }
