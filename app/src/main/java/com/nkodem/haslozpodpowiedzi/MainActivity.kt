@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             var duza ="-?+(\\.[A-Z]+)?".toRegex()
             var mala ="-?+(\\.[a-z]+)?".toRegex()
             var cyfra ="-?+(\\.[0-9]+)?".toRegex()
+            var znak ="-?+(\\.[%!_$#&-]+)?".toRegex()
             if (password == potwierdź){
                 findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_on_background)
             }
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
                 findViewById<ImageView>(R.id.imageView4).setImageResource(android.R.drawable.checkbox_on_background)}
             else{
                 findViewById<ImageView>(R.id.imageView4).setImageResource(android.R.drawable.checkbox_off_background)}
+            if (znak.containsMatchIn(password)) {
+                findViewById<ImageView>(R.id.imageView5).setImageResource(android.R.drawable.checkbox_on_background)}
+            else{
+                findViewById<ImageView>(R.id.imageView5).setImageResource(android.R.drawable.checkbox_off_background)}
             }
         }
     }
