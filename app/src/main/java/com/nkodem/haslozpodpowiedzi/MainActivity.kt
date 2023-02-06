@@ -17,15 +17,26 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.Sprawdź).setOnClickListener {
             var password = findViewById<TextInputEditText>(R.id.Hasło).text.toString()
             var potwierdź = findViewById<TextInputEditText>(R.id.Potwierdź).text.toString()
-
+            var duza ="-?+(\\.[A-Z]+)?".toRegex()
+            var mala ="-?+(\\.[a-z]+)?".toRegex()
+            var cyfra ="-?+(\\.[0-9]+)?".toRegex()
             if (password == potwierdź){
                 findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_on_background)
             }
                 else{
                 findViewById<ImageView>(R.id.imageView).setImageResource(android.R.drawable.checkbox_off_background)}
-            if (password=="^(?=.*[A-Z])$"){
-                findViewById<ImageView>(R.id.imageView2).setImageResource(android.R.drawable.checkbox_on_background)
+            if (duza.containsMatchIn(password)) {
+                findViewById<ImageView>(R.id.imageView2).setImageResource(android.R.drawable.checkbox_on_background)}
+                else{
+                findViewById<ImageView>(R.id.imageView2).setImageResource(android.R.drawable.checkbox_off_background)}
+            if (mala.containsMatchIn(password)) {
+                findViewById<ImageView>(R.id.imageView3).setImageResource(android.R.drawable.checkbox_on_background)}
+            else{
+                findViewById<ImageView>(R.id.imageView3).setImageResource(android.R.drawable.checkbox_off_background)}
+            if (cyfra.containsMatchIn(password)) {
+                findViewById<ImageView>(R.id.imageView4).setImageResource(android.R.drawable.checkbox_on_background)}
+            else{
+                findViewById<ImageView>(R.id.imageView4).setImageResource(android.R.drawable.checkbox_off_background)}
             }
         }
     }
-}
